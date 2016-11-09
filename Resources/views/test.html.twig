@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <title>Intranet du Laboratoire Galaxy-Swiss Bourdin</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="{{ asset('bundles/framework/css/styles.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+  </head>
+  <body>
+    <div id="page">
+      <div id="entete">
+        <img src="{{ asset('bundles/framework/images/logo.jpg')}}" id="logoGSB" alt="Laboratoire Galaxy-Swiss Bourdin" title="Laboratoire Galaxy-Swiss Bourdin" />
+        <h1>Liste des affectations des tablettes</h1>
+      </div>
+     </div>
+          {% block menu %}
+<div id="menuGauche">
+     <div id="infosUtil">
+         <h3>
+            {%if(app.session.get('nom') is defined )%}
+                          Bonjour, {{app.session.get('nom')}} !<br>   
+            {%endif%}
+        </h3>
+     </div>  
+        <ul id="menuList">
+	   <li class="smenu">
+              <a href="{{path('pg_gsb_frais_validerfichefrais')}}" title="Valider fiche frais">Valider fiche frais</a>
+           </li>
+           <li class="smenu">
+              <a href="{{path('pg_gsb_frais_validerfrais')}}" title="Valider frais ">Valider frais </a>
+           </li>	
+           <li class="smenu">
+              <a href="{{path('pg_gsb_frais_listertablettes')}}" title="Affectation tablettes">Affectation tablettes</a>
+           </li>
+           <li class="smenu">
+              <a href="{{path('pg_gsb_frais_deconnexion')}}" title="Se déconnecter">Déconnexion</a>
+           </li>
+         </ul>
+     </div> 
+{% endblock%}
+
+         {% block body %}
+ 			{% block bloc1 %} 
+ 	
+    	{% endblock %}    
+    	{% endblock%}
+ 
+    </body>
+</html>

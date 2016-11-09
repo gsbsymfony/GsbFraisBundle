@@ -1,0 +1,59 @@
+{% extends "PgGsbFraisBundle::test.html.twig" %}
+
+
+{% block body %} {{ parent() }}
+
+<div id="contenu">
+      <h2>Affectation tablettes</h2>
+  
+
+  <table border="2" width="50%">
+  <tr>
+    <th>Visiteur</th><th>N° Tablette</th><th>Type</th><th>Memoire Interne (Go)</th><th>Memoire Externe (Go)</th>
+  </tr>
+{% for tablettes in tablettes %}
+
+  <tr>
+  <td>{{ tablettes.visiteur }}</td>
+  <td>{{ tablettes.id }}</td>
+  <td>{{ tablettes.os }}</td>
+  <td>{{ tablettes.MemoireInterne }}</td>
+  <td>{{ tablettes.MemoireExterne }}</td>
+  
+  </tr>
+{% endfor %}
+
+
+</div>
+
+  
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
